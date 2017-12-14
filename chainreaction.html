@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+
+<div align="center">
+    <canvas id="myCanvas" width="600px" height="600px"
+    style="border:2px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+
+    <button id=level_continue 
+            style="position: absolute; left: 300px; top: 150px; visibility: hidden; font-size:150%" 
+            onclick="toggleMainLoop()">Continue</button>
+    <p><button id=start_stop 
+               style="font-size:120%" 
+               onclick="toggleMainLoop()">Start</button>  </p>
+    <p style="font-size:120%"><b>Level</b></p>
+    <form id=playLevel action="">
+        <input type="radio" name="playLevel" value="1" checked="true">Easy<br>
+        <input type="radio" name="playLevel" value="2">Medium<br>
+        <input type="radio" name="playLevel" value="3">Hard<br>
+     </form>
+    <p></p>
+    <table>
+        <tr>
+            <td><b>Level</b></td>
+            <td id = "level">0</td>
+        </tr>
+        <tr>
+            <td><b>Level Score</b></td>
+            <td id="level_score" width=100px>0</td>
+        </tr>
+        <tr>
+            <td><b>Game Score</b></td>
+            <td id="game_score" width=100px>0</id>
+        </tr>
+    </table>
+</div>
+
+
+<script src="chainreaction.js">
+</script>
+
+</body>
+</html>
